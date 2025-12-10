@@ -6,6 +6,7 @@ import BasicState from './components/BasicState.vue'
 import BasicStateMutations from './components/BasicStateMutations.vue'
 import PiniaState from './components/PiniaState.vue' 
 import PiniaStateMutations from './components/PiniaStateMutations.vue'
+import Products from './components/Products.vue'
 
 function displayNewItemsCount(newCount) {
     alert(newCount)
@@ -26,5 +27,6 @@ function displayNewItemsCount(newCount) {
 <h1>Pinia state</h1>
     <PiniaState/>
     <PiniaStateMutations/>
+    <Products/>
   </main>
 </template>
