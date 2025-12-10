@@ -24,5 +24,8 @@ export const useLectureStore = defineStore('lecture', {
         addToCart(item) {
             this.cart.push(item)
         }
-    }
+    },
+    persist: {
+        key: 'lecture-store'
+    },
 })
