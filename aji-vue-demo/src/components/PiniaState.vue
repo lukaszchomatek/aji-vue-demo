@@ -1,9 +1,9 @@
 <template>
-    <p>store.message: {{ store.state.message }}</p>
-    <p>store.counter: {{ store.state.counter }}</p>
-    <p>store.student.name {{ store.state.student.name }}</p>
-    <p>store.student.surname {{ store.state.student.surname }}</p>
-    <p>store.student.studentId {{ store.state.student.studentId }}</p>
+    <p>store.message: {{ store.message }}</p>
+    <p>store.counter: {{ store.counter }}</p>
+    <p>store.student.name {{ store.student.name }}</p>
+    <p>store.student.surname {{ store.student.surname }}</p>
+    <p>store.student.studentId {{ store.student.studentId }}</p>
     <p>Cart:</p>
     <table>
         <thead>
@@ -13,7 +13,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr v-for="item in store.state.cart">
+            <tr v-for="item in store.cart">
                 <td>
                     {{item.name}}
                 </td>
@@ -26,11 +26,12 @@
 </template>
 
 <script>
-import store from '../data/basicStore'
+import { useLectureStore } from '../data/piniaStore';
 
 export default {
     setup() {
+        const store = useLectureStore()
         return { store }
-    }
+    },
 }
 </script>

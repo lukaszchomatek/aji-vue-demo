@@ -5,12 +5,8 @@
     </p>
     <p>Modify properties (directly):
         <div>
-            v-model=student.name (student declared as store.state.student)
-            <input type="text" v-model="student.name"/>
-        </div>
-        <div>
-            v-model=sharedState.student.name (sharedState declared as store.state)
-            <input type="text" v-model="sharedState.student.name"/>
+            v-model=store.state.student.name
+            <input type="text" v-model="store.state.student.name"/>
         </div>
     </p>
     <p>Add to cart:
@@ -34,14 +30,13 @@ const defaultItem = () => ({
 })
 
 export default {
+    setup() {
+        return { store }
+    },
     data() {
         return {
-            student : store.state.student,
-            sharedState: store.state,
-            newCartItem: {
-                name: "",
-                amount: 1
-            }
+
+            newCartItem: defaultItem()
         }
     },
     methods: {

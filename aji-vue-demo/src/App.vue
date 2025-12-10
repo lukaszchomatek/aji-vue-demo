@@ -4,6 +4,9 @@ import TheWelcome from './components/TheWelcome.vue'
 import DemoVue from './components/Demo.vue'
 import BasicState from './components/BasicState.vue'  
 import BasicStateMutations from './components/BasicStateMutations.vue'
+import PiniaState from './components/PiniaState.vue' 
+import PiniaStateMutations from './components/PiniaStateMutations.vue'
+
 function displayNewItemsCount(newCount) {
     alert(newCount)
   }
@@ -16,7 +19,12 @@ function displayNewItemsCount(newCount) {
     <HelloWorld msg="asdfasd" counter="2"/>
     <DemoVue @itemsNumberChanged="displayNewItemsCount" />
   -->
-    <BasicState/>
+<h1>Basic state</h1>
+  <BasicState/>
     <BasicStateMutations/>
+
+<h1>Pinia state</h1>
+    <PiniaState/>
+    <PiniaStateMutations/>
   </main>
 </template>
